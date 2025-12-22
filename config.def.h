@@ -6,12 +6,12 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappx     = 15;       /* gap pixel between windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "ProFont IIx Nerd Font:size=12" };
-static const char col_gray1[]       = "#1a1a1a";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#1a1a1a";
-static const char col_cyan[]        = "#969896";
+static const char *fonts[]          = { "Hack Nerd Font:size=12" };
+static const char col_gray1[]       = "#1A1A1A";
+static const char col_gray2[]       = "#1A1A1A";
+static const char col_gray3[]       = "#C5C8C6";
+static const char col_gray4[]       = "#1A1A1A";
+static const char col_cyan[]        = "#C5C8C6";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
