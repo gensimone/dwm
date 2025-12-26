@@ -7,11 +7,11 @@ static const unsigned int gappx = 15;   /* gap pixel between windows */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
 static const char *fonts[] = {"JetBrainsMono Nerd Font:size=12"};
-static const char col_gray1[] = "#000000";
-static const char col_gray2[] = "#000000";
-static const char col_gray3[] = "#C5C8C6";
-static const char col_gray4[] = "#000000";
-static const char col_cyan[] = "#393963";
+static const char col_gray1[] = "#282828";  /* background */
+static const char col_gray2[] = "#282828";  /* border */
+static const char col_gray3[] = "#ebdbb2";  /* foreground */
+static const char col_gray4[] = "#282828";  /* foreground sel */
+static const char col_cyan[] = "#928374";   /* background sel */
 static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
