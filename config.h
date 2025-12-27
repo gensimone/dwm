@@ -7,16 +7,15 @@ static const unsigned int gappx = 15;   /* gap pixel between windows */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
 static const char *fonts[] = {"JetBrainsMono Nerd Font:size=12"};
-static const char col_gray1[] = "#282828";  /* background */
-static const char col_gray2[] = "#282828";  /* border */
-static const char col_gray3[] = "#ebdbb2";  /* foreground */
-static const char col_gray4[] = "#282828";  /* foreground sel */
-static const char col_cyan[] = "#ebdbb2";   /* background sel */
-static const char border[] = "#488588";     /* border sel */
+static const char col_gray1[] = "#000000"; /* background */
+static const char col_gray2[] = "#1e1e1e"; /* border */
+static const char col_gray3[] = "#ffffff"; /* foreground */
+static const char col_gray4[] = "#1e1e1e"; /* foreground sel */
+static const char col_cyan[] = "#44bb44";  /* background sel */
 static const char *colors[][3] = {
     /*               fg         bg         border   */
-    [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
-    [SchemeSel] = {col_gray4, col_cyan, border },
+    [SchemeNorm] = {col_gray3, col_gray2, col_gray2},
+    [SchemeSel] = {col_cyan, col_gray1, col_gray4},
 };
 
 /* tagging */
@@ -76,8 +75,8 @@ static const Key keys[] = {
     {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
     {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
-    TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
-    TAGKEYS(XK_9, 8)
+        TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
+            TAGKEYS(XK_9, 8)
     /* { MODKEY|ShiftMask,             XK_q,      quit,           {0} }, */
 };
 
@@ -88,7 +87,6 @@ static const Button buttons[] = {
     /* click                event mask      button          function argument */
     {ClkLtSymbol, 0, Button1, setlayout, {0}},
     {ClkLtSymbol, 0, Button3, setlayout, {.v = &layouts[2]}},
-    {ClkWinTitle, 0, Button2, zoom, {0}},
     {ClkClientWin, MODKEY, Button1, movemouse, {0}},
     {ClkClientWin, MODKEY, Button2, togglefloating, {0}},
     {ClkClientWin, MODKEY, Button3, resizemouse, {0}},
